@@ -1,0 +1,8 @@
+#pragma once
+
+#ifndef LDLFS_NN_HPP_INCLUDED
+#define LDLFS_NN_HPP_INCLUDED
+
+
+
+#endif//LDLFS_NN_HPP_INCLUDED
