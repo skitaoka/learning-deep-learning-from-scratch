@@ -1,14 +1,20 @@
 version: 1.0.{build}
 pull_requests:
   do_not_increment_build_number: true
+image: Visual Studio 2015
 configuration: Release
 platform: x64
 clone_depth: 50
-before_build:
-- ps: >-
-    (New-Item build -type directory) -and (Set-Location build)
+install:
+- cmd: >-
+    mkdir build && cd build
 
-    cmake .. -G "Visual Studio 14 Win64"
+    cmake .. -G "Visual Studio 14 2015 Win64"
+
+    cd ..
 build:
-  project: C:\projects\learning-deep-learning-from-scratch\build\ALL_BUILD.vcxproj
+  project: build\ALL_BUILD.vcxproj
   verbosity: minimal
+artifacts:
+- path: bin/Release
+  name: LearningDeepLearningFromScratch
