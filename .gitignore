@@ -28,5 +28,6 @@
 *.app
 
 # Directories
+bin
+lib
 build
-

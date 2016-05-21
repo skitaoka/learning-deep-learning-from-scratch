@@ -2,4 +2,3 @@ os: osx
 language: cpp
 compiler: clang
 script: mkdir build && cd build && cmake .. && make
-
